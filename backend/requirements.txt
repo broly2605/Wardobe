@@ -1,0 +1,31 @@
+# --- Web framework ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# --- Database (async SQLAlchemy 2.0 + Postgres) ---
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+psycopg[binary]==3.2.3
+alembic==1.14.0
+
+# --- Config & validation ---
+pydantic==2.10.4
+pydantic-settings==2.7.0
+
+# --- HTTP / external services ---
+httpx==0.28.1
+openai==1.59.6
+
+# --- Image handling ---
+pillow>=11.1.0
+
+# --- Background removal (scanner). Optional at runtime: if these fail to
+# install, the scanner falls back to a Pillow-based heuristic automatically.
+# rembg 2.0.62+ is required for Python 3.13 support. ---
+rembg>=2.0.62
+onnxruntime>=1.20.1
+
+# --- Dev / testing ---
+pytest==8.3.4
+pytest-asyncio==0.25.2
